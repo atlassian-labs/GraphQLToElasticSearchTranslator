@@ -1,0 +1,25 @@
+{
+    "transform": {
+        "^.+\\.(t|j)sx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "modulePathIgnorePatterns": [
+        "<rootDir>/node_modules/",
+        "<rootDir>/build/"
+    ],
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
+    "collectCoverageFrom": [
+        "./src/**/*.{js,jsx,ts,tsx}",
+        "!**/node_modules/**",
+        "!**/vendor/**",
+        "!**/build/**"
+    ],
+    "coverageThreshold": {
+        "global": {
+            "branches": 90,
+            "functions": 90,
+            "lines": 90,
+            "statements": -10
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "declaration": true,
+        "strict": true,
+        "outDir": "./build",
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "preserveConstEnums": true,
+        "pretty": true,
+        "removeComments": true,
+        "strictNullChecks": true,
+        "skipLibCheck": true,
+    },
+    "include": ["./src/"],
+    "exclude": ["node_modules", "**/__test__/*", "**/__tests__/*"]
+}

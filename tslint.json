@@ -1,0 +1,8 @@
+{
+    "rules": {
+        "variable-name": {
+            "options": ["allow-snake-case"]
+        }
+    },
+    "extends": ["tslint:recommended", "tslint-config-prettier"]
+}
