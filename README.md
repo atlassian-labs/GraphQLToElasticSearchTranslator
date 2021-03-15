@@ -27,10 +27,9 @@ npm test
 ## How to use the filter
 ```
 import { QueryGenerator } from 'graphql-elasticsearch';
-import { FilterConfig } from "../types";
 
-const args: { [k: string]: any } // Graphql query args
-const testFilterConfig: FilterConfig  = {
+let args = {email:'test@test.com'};  // Graphql query args
+const testFilterConfig: any  = {
     filter: {
         isNull: ['id'],
         isNotNull: ['email'],
@@ -83,8 +82,16 @@ const testFilterConfig: FilterConfig  = {
 };
 
 let query = bodybuilder();
-Object.entries(args).forEach(([k, v]) => {
-    query = new QueryGenerator().getFilterQuery(query,v,filterConfig);
-});
+query = new QueryGenerator().getFilterQuery(query,args,filterConfig);
 
+ES query: 
+"query": {
+    "bool": {
+      "must": [{
+            "term": {
+                "email.raw": "test@test.com"
+            }
+        }]   
+    }
+}
 ```

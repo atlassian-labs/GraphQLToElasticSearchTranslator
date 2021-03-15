@@ -1,12 +1,8 @@
 {
-  "name": "@atlassian/graphql-elasticsearch",
-  "version": "0.1.2",
+  "name": "graphql-elasticsearch",
+  "version": "0.0.1",
   "description": "Library use to convert GraphQL arguments to ElasticSearch queries.",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
-  "files": [
-    "build/**/*"
-  ],
+  "private": true,
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
@@ -15,17 +11,12 @@
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@bitbucket.org:atlassian/hydra-common.git"
-  },
   "keywords": [
     "graphql",
     "elasticsearch"
   ],
-  "author": "",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/atlassian/hydra-common/src/master/graphql-elasticsearch/README.md",
+  "author": "Riddhi Mankad",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@types/jest": "^26.0.9",
     "jest": "^26.2.2",
