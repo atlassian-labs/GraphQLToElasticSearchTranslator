@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Elasticsearch QueryGenerator tests should return correctly formatted queries given a email 1`] = `
+Object {
+  "query": Object {
+    "bool": Object {
+      "must": Array [
+        Object {
+          "term": Object {
+            "email.raw": "test@test.com",
+          },
+        },
+      ],
+    },
+  },
+}
+`;
+
+exports[`Elasticsearch QueryGenerator tests should return correctly formatted queries given an AND operator 1`] = `
+Object {
+  "query": Object {
+    "bool": Object {
+      "must": Array [
+        Object {
+          "term": Object {
+            "id": "123",
+          },
+        },
+        Object {
+          "term": Object {
+            "email.raw": "test@test.com",
+          },
+        },
+      ],
+    },
+  },
+}
+`;
+
+exports[`Elasticsearch QueryGenerator tests should return correctly formatted queries given an OR operator 1`] = `
+Object {
+  "query": Object {
+    "bool": Object {
+      "should": Array [
+        Object {
+          "term": Object {
+            "id": "123",
+          },
+        },
+        Object {
+          "term": Object {
+            "email.raw": "test@test.com",
+          },
+        },
+      ],
+    },
+  },
+}
+`;
+
+exports[`Elasticsearch QueryGenerator tests should return correctly formatted queries given an isNull operator 1`] = `
+Object {
+  "query": Object {
+    "bool": Object {
+      "must_not": Array [
+        Object {
+          "exists": Object {
+            "field": "id",
+          },
+        },
+      ],
+    },
+  },
+}
+`;
+
+exports[`Elasticsearch QueryGenerator tests should return correctly formatted queries given an isNull operator 2`] = `
+Object {
+  "query": Object {
+    "bool": Object {
+      "must": Array [
+        Object {
+          "exists": Object {
+            "field": "email.raw",
+          },
+        },
+      ],
+    },
+  },
+}
+`;
