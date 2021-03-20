@@ -13,4 +13,4 @@ set -e
 cd $1
 
 npm install --unsafe-perm
-npm publish --unsafe-perm
+npm publish --unsafe-perm --registry https://packages.atlassian.com/artifactory/api/npm/npm-private-local/
