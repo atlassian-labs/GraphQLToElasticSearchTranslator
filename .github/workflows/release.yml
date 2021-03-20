@@ -27,4 +27,4 @@ jobs:
           ARTIFACTORY_API_KEY: ${{ secrets.ARTIFACTORY_API_KEY }}
           SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
           SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
-      run: bash ../../bin/upload-js.sh ./
+      run: bash bin/upload-js.sh ./
