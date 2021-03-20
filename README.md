@@ -23,6 +23,9 @@ npm install
 # Run all checks
 npm test
 
+# Perform a release
+bash bin/upload-js.sh ./
+
 ```
 ## How to use the filter
 ```

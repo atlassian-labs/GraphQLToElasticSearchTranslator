@@ -1,8 +1,12 @@
 {
-  "name": "graphql-elasticsearch",
-  "version": "0.0.1",
+  "name": "@atlassian/graphql-elasticsearch",
+  "version": "0.1.4",
   "description": "Library use to convert GraphQL arguments to ElasticSearch queries.",
-  "private": true,
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
