@@ -19,7 +19,7 @@
     "graphql",
     "elasticsearch"
   ],
-  "author": "Riddhi Mankad",
+  "author": "",
   "license": "Apache-2.0",
   "devDependencies": {
     "@types/jest": "^26.0.9",
