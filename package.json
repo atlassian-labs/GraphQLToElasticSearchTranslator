@@ -1,6 +1,7 @@
 {
   "name": "@atlassian/graphql-elasticsearch",
-  "version": "0.1.4",
+  "version": "0.1.5",
+  "private": true,
   "description": "Library use to convert GraphQL arguments to ElasticSearch queries.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
