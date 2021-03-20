@@ -1,0 +1,30 @@
+name: Node.js CD
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: publish
+      env:
+          # The Artifactory secrets are available for all repos in the org,
+          # so you don't have to set them as secrets in your project.
+          ARTIFACTORY_USERNAME: ${{ secrets.ARTIFACTORY_USERNAME }}
+          ARTIFACTORY_API_KEY: ${{ secrets.ARTIFACTORY_API_KEY }}
+          SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
+          SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
+      run: bash ../bin/upload-js.sh ./
