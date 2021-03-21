@@ -21,7 +21,7 @@ jobs:
         run: npm test
 
       - name: Publish packages to npm registry
-        run: npm publish --access=public
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       
