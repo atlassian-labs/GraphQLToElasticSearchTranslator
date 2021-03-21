@@ -17,11 +17,8 @@ jobs:
       - name: Install packages
         run: npm install
 
-      - name: Verify source
-        run: npm run preversion
-
-      - name: Build source
-        run: npm run build
+      - name: Run test
+        run: npm test
 
       - name: Publish packages to npm registry
         run: npm publish
